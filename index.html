@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JavaScript</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FONTS AND ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-body">
+        <div class="calculator-viewfinder">
+            <p id="response"></p>
+        </div>
+        <ul class="list-buttons">
+            <li class="standard-line">
+                <button onclick="removeAllCharacters(0)">ON/AC</button>
+                <button onclick="removeCharacter(1)"><span class="material-symbols-outlined">backspace</span></button>
+                <button onclick="controlKeyPressed('÷', 2)" class="operators">÷</button>
+                <button onclick="controlKeyPressed('*', 3)" class="operators">*</button>
+            </li>
+            <li class="standard-line">
+                <button onclick="controlKeyPressed('7', 4)">7</button>
+                <button onclick="controlKeyPressed('8', 5)">8</button>
+                <button onclick="controlKeyPressed('9', 6)">9</button>
+                <button onclick="controlKeyPressed('-', 7)" class="operators">-</button>
+            </li>
+            <li class="standard-line">
+                <button onclick="controlKeyPressed('4', 8)">4</button>
+                <button onclick="controlKeyPressed('5', 9)">5</button>
+                <button onclick="controlKeyPressed('6', 10)">6</button>
+                <button onclick="controlKeyPressed('+', 11)" class="operators">+</button>
+            </li>
+            <li class="unusual-line">
+                <button onclick="controlKeyPressed('1', 12)">1</button>
+                <button onclick="controlKeyPressed('2', 13)">2</button>
+                <button onclick="controlKeyPressed('3', 14)">3</button>
+            </li>
+            <li class="unusual-line">
+                <button onclick="controlKeyPressed('0', 15)" id="double-column">0</button>
+                <button onclick="controlKeyPressed('.', 16)" class="operators">.</button>
+                <button onclick="controlKeyPressed('=', 17)" id="double-row" class="operators">=</button>
+            </div>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

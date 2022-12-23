@@ -1,0 +1,126 @@
+/* GLOBAL SETTINGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-general: #EDEDED;
+    --bg-calculator: #0011ff;
+    --bg-viewfinder: #727e78;
+    --bg-buttons: #f7f4f1;
+    --bg-button-especial: #36c000;
+
+    --primary-font: 'Roboto', sans-serif;
+    --operators-font: 'Inconsolata', monospace;
+    --viewfinder-font: 'Digital-7', sans-serif;
+    
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-general);
+    background-image: url('assets/img/desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.calculator-body{
+    position: relative;
+    min-width: 32rem;
+    max-width: 32rem;
+    margin-inline: auto;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    border: .2rem solid #00000036;
+    outline: .5rem solid var(--bg-calculator);
+    background-color: var(--bg-calculator);
+}
+
+/* CALCULATOR VIEWFINDER */
+.calculator-viewfinder{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-family: var(--viewfinder-font);
+    font-size: 4rem;
+    height: 8rem;
+    padding: 1.5rem;
+    border-radius: 1.3rem;
+    box-shadow: inset .1rem .1rem .5rem #000000;
+    background-color: var(--bg-viewfinder);
+}
+
+/* LIST BUTTONS */
+.list-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.list-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--primary-font);
+    font-size: 1.7rem;
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 100%;
+    box-shadow: .2rem .2rem #00000073;
+    background-color: var(--bg-buttons);
+}
+
+.list-buttons button.active{
+    transform: translateY(.3rem);
+    box-shadow: .1rem .1rem .2rem #00000073;
+}
+
+.list-buttons .operators{
+    font-family: var(--operators-font);
+    font-size: 2.5rem;
+}
+
+.list-buttons .standard-line{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-buttons .standard-line:first-child button{
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+.list-buttons .standard-line:first-child button:first-child{
+    background-color: var(--bg-button-especial);
+}
+
+.list-buttons .unusual-line{
+    display: flex;
+    justify-content: space-between;
+    width: 74%;
+}
+
+.list-buttons .unusual-line #double-column{
+    width: 13.5rem;
+    border-radius: 20rem;
+}
+
+.list-buttons .unusual-line #double-row{
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    height: 13.5rem;
+    border-radius: 20rem;
+}
